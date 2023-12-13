@@ -1,0 +1,126 @@
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.main{
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.488);
+    display: flex;
+    justify-content: center;
+    border-radius: 20PX;
+}
+.d1{
+    width: 50%;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.d2{
+    width: 46%;
+    height: auto;
+    padding: 20px;
+    background-color: #60A7FF;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+h1{
+    text-align: center;
+    font-family: Arial;
+    color: white;
+}
+.txt{
+    width: 80%;
+    border: none;
+    border-bottom: solid;
+    border-color: white;
+    margin: auto;
+    height: 30px;
+    font-family: Arial;
+    background-color: rgba(241, 243, 240, 0.705);
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    display: block;
+}
+.lh{
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 30px;
+    font-family: Arial;
+    color: white;
+}
+.ch{
+    margin-left: 10px;
+}
+.bt{
+    width: 30%;
+    border: solid;
+    border-color: white;
+    margin: auto;
+    height: 30px;
+    font-family: Arial;
+    background-color: rgba(241, 243, 240, 0.705);
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    color: #757575;
+}
+.Phone{
+    width: 25%;
+    margin: 10px;
+    border-color: white;
+    height: 30px;
+    font-family: Arial;
+    background-color: rgba(241, 243, 240, 0.705);
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid white;
+}
+.dt{
+    width: 25%;
+    border-color: white;
+    margin: 10px;
+    height: 30px;
+    font-family: Arial;
+    background-color: rgba(241, 243, 240, 0.705);
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid white;
+    color: #757575;
+}
+textarea{
+    width: 80%;
+    border-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 220px;
+    font-family: Arial;
+    background-color: rgba(241, 243, 240, 0.705);
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid white;
+
+}
+body{
+    background-color: #60a7ffa9;
+}
+form {
+    animation: slideInFromTop 1s ease-out;
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

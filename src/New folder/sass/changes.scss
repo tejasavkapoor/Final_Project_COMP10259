@@ -1,0 +1,16 @@
+$buttonBgColor : red;
+$navBarLinksColor: yellow;
+$navBarHoverColor: white;
+$formBordertype: 2px dashed lightblue;
+
+.header .nav ul li a{
+    color: $navBarLinksColor;
+    &:hover{color: $navBarHoverColor;}
+}
+.main{
+    border: $formBordertype;
+}
+.bt{
+    background-color: $buttonBgColor;
+    
+}

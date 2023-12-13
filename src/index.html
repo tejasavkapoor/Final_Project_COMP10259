@@ -1,0 +1,199 @@
+<!-- Your main page should go here -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Write your species name under the title -->
+	<title> Stone Fish  </title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="New folder/sass/changes.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<scrip>
+		<script>
+        $(document).ready(function() {
+            // Step 2.1: Keep the navigation bar fixed through jQuery
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 0) {
+                    $('.header').addClass('fixed');
+                } else {
+                    $('.header').removeClass('fixed');
+                }
+            });
+
+            // Step 2.2: Make the lightbox images and videos (Gallery) displayed as a slideshow
+            $(".gallery-section a").click(function(event) {
+                event.preventDefault();
+                var source = $(this).attr("href") || $(this).find('img').attr("src");
+                $(".lightbox-content").html('<span class="lightbox-close">&times;</span><img src="' + source + '" alt="">');
+                $(".lightbox-overlay, .lightbox-content").fadeIn();
+            });
+
+            // Step 2.3: Close the slideshow by clicking anywhere outside the slideshow part
+            $(document).on('click', '.lightbox-overlay, .lightbox-close', function() {
+                $(".lightbox-overlay, .lightbox-content").fadeOut();
+            });
+        
+			var slideIndex = 0;
+        var slides = $(".mySlides");
+
+        function showSlides() {
+            slides.hide();
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides.eq(slideIndex - 1).show();
+        }
+
+        // Set up automatic slideshow
+        var slideshowInterval = setInterval(showSlides, 3000);
+
+        // Slideshow navigation buttons
+        $(".prev").click(function() {
+            clearInterval(slideshowInterval); // Stop automatic slideshow
+            slideIndex -= 2;
+            showSlides();
+        });
+
+        $(".next").click(function() {
+            clearInterval(slideshowInterval); // Stop automatic slideshow
+            showSlides();
+        });
+    });
+		
+	</script>
+</head>
+
+<body>
+<!-- Header Start -->
+<header class="header">
+	<div class="container">
+		<div class="row justify-content-between align-items-center">
+			<div class="fish-name">
+                <!-- Write your species name under the anchor tag -->
+				<a href="index.html"> Stone Fish</a>
+			</div>
+	 <div class="nav-toggle">
+	   <span></span>
+	 </div>
+			<nav class="nav">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#predators">Prey & Predators</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#count">World Count</a></li>
+                    <li><a href="honesty.html">Honesty Declaration</a></li>
+					<li><a href="New folder/signup activity.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<!-- Header End -->
+
+<!-- Home Section Start -->
+<section class="home-section" id="home">
+	
+<div class="headingfirst"><h1 style="color:white; padding-top: 250px; text-align: center;font-size: 100px; font-family:'Times New Roman', Times, serif;">STONEFISH</h1></div>
+</section>
+<!-- Home Section End -->
+<!-- About Section Start -->
+<section class="about-section" id="about">
+	<h2>About</h2>
+	<h3>The Stonefish: Master of Camouflage and Venom
+	</h3>
+	<p>Stonefish (Synanceia spp.) is an excellent mimic and a dangerous hunter from Synanceiidae. These venomous fish, 
+		known for their incredible camouflage that allows them to blend in and look like rocks, or corals, are hard to 
+		discover easily. Stonefishes are mostly found in the Indo-Pacific waters in shallow coastal areas and in the 
+		estuaries, as well as at the coral reefs.</p>
+	<h3>Physical Characteristics:
+	</h3>
+	<p>Stonefish is a strong and flat fish that has detailed patterns, colors, which resemble rocks and corals where
+		they hide. These fishes, which are usually 30 to 40 centimeters long, have 13 dorsal spines that can inject 
+		powerful venom.</p>	
+	
+</section>
+<!-- About Section End -->
+
+<!-- Prey & Predators Section Start -->
+<section class="predators-section" id="predators">
+	<h2>Predators</h2>
+	<h3>Camouflage and Ambush Predation:
+	</h3>
+	<p>Stonefish are ambush predators that depend entirely on their great camouflage to remain hidden and wait for their
+	victims to arrive. They stay still for long without moving and wait until small insects such as fish or crustaceans 
+	reach them to strike.3 Stonefish then has very quick reflexes and it will suddenly go and gulp down its prey 
+	with a huge mouth.</p>
+	<h3>Venomous Defense Mechanism:</h3>
+	<p>Stonefish’s venom is a deadly mix of many toxins, making it one of the deadliest fish discovered by man. Its venom 
+		is loaded with neurotoxins which may result in severe tissue damage leading to death. In a case where an unaware 
+		human steps on the spines along the spine of the dursal fin, the venom is released.</p>
+	
+	<h3>Predators of the Stonefish:</h3>
+	<p>Although stonefish are dangerous predators, they, too, have their own set of predators. Stonefishes also tend 
+		to be predated by larger fish, sharks and some species of rays. Stonefish are usually avoided for predation 
+		because they easily blend with the reefs and their powerful venom can immobilize the offender.</p>
+	
+</section>
+<!-- Prey & Predators Section End -->
+
+<!-- Gallery Section Start -->
+<section class="gallery-section" id="gallery">
+	<h1 style="font-size:xxx-large; text-align: center;" >Gallery</h1>
+	<div class="lightbox-overlay">
+        <div class="lightbox-content"></div>
+    </div>
+	<div class="slideshow-container">
+        <div class="mySlides">
+            <a href="img/stonefish.jpg">
+                <img src="img/stonefish.jpg" alt="">
+            </a>
+        </div>
+        <div class="mySlides">
+            <a href="img/stonefish1.jpg">
+                <img src="img/stonefish1.jpg" alt="">
+            </a>
+        </div>
+        <div class="mySlides">
+            <a href="img/stonefish2.jpg">
+                <img src="img/stonefish2.jpg" alt="">
+            </a>
+        </div>
+        <div class="mySlides">
+            <a href="img/stonefish3.jpg">
+                <img src="img/stonefish3.jpg" alt="">
+            </a>
+        </div>
+        <div class="mySlides">
+            <a href="img/stonefish4.jpg">
+                <img src="img/stonefish4.jpg" alt="">
+            </a>
+        </div>
+		<button class="prev">❮ Previous</button>
+        <button class="next">Next ❯</button>
+    </div>
+<br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/orQQ3iC8MRo?si=FTCFCjC0IfN1Jnnp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/NqyHheVCRkM?si=SxIfnfm1aE29HqEO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</section>
+<!-- Gallery Section End --> 
+<!-- World Count Section Start -->
+ <section class="count-section" id="count">
+	<h3>Conservation Status:</h3>
+	<p>Information on stone-fish populations is scant and collecting global statistics is very difficult. On the other hand, 
+		localized declines have been noted in some areas, mostly because of habitat destruction, overfishing, and pollution. 
+		It is important to ensure the survival of these unique and environmentally important creatures through conservation endeavors.</p>
+</section>
+<!-- World Count Section End -->
+<section class="contact" id="contact">
+	<h2>Contact Us</h2>
+	<p>Email:yxyxt@gmail.com</p>
+	<p>Phone:123-456-6789</p>
+</section>
+ <!-- Write your name under the para tag -->
+<p class="copyright">&copy; 2023 SahilTejasav.Org.</p>
+
+</body>
+</html>
